@@ -1,0 +1,11 @@
+server {
+    listen 80;
+    server_name www.carlos.test;
+
+    root /var/www/miweb/html;
+    index index.html index.htm;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
